@@ -11,8 +11,8 @@ function Login() {
 
   const handleLogin = () => {
     // Define the correct credentials
-    const correctUsername = 'Nikkitha Fatima Muzawar';
-    const correctPassword = 'Pretty_F@ce_123';
+    const correctUsername = 'username';
+    const correctPassword = 'password';
 
     // Check if the provided credentials match
     if (username === correctUsername && password === correctPassword) {
@@ -54,9 +54,10 @@ function Login() {
           <label htmlFor="remember-me" className="checkbox-label">Remember me</label>
         </div>
         <div className="link-group">
-          <a href="/signup" className="link">Sign me up</a>
+          <a href="/signup" className="link">Sign in as Doctor</a>
         </div>
         <button className="login-button" onClick={handleLogin}>Login</button>
+       
         
         {/* Login with section */}
         <div className="Login-alt">

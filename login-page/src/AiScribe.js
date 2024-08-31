@@ -1,12 +1,29 @@
 import React, { useState } from 'react';
-import './AiScribe.css'; // Make sure to create this CSS file for styling
+import './AiScribe.css'; // Ensure this file exists with appropriate styling
 
 function AiScribe() {
   const [symptoms, setSymptoms] = useState('');
+  const [summary, setSummary] = useState([]);
 
-  const handleButtonClick = () => {
-    // Handle button click logic here
-    console.log('Symptoms:', symptoms);
+  const handleButtonClick = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/summarize', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ symptoms }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to summarize symptoms');
+      }
+
+      const data = await response.json();
+      setSummary(data.summary);
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (
@@ -21,6 +38,16 @@ function AiScribe() {
       <button className="appointment-button" onClick={handleButtonClick}>
         Find me an appointment
       </button>
+      {summary.length > 0 && (
+        <div className="summary-output">
+          <h2>Summary</h2>
+          <ul>
+            {summary.map((sentence, index) => (
+              <li key={index}>{sentence}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
