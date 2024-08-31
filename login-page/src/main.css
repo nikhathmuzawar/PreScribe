@@ -1,0 +1,105 @@
+.App {
+  background-color: rgb(37, 67, 112);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 10px;
+  left:10px;
+  font-size: 24px;
+  color: rgb(210,210,210);
+  cursor: pointer;
+}
+
+.utilities-menu {
+  position: absolute;
+  top: 50px;
+  left: 10px; 
+  width: 150px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.utilities-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.utilities-menu li {
+  margin: 10px 0;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+
+.utilities-menu li:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.image-text-container {
+  background-color: rgb(210,210,210);
+  display: flex;
+  width: 600px; 
+  height: 250px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.text-side {
+  background-color: rgb(210,210,210);
+  margin-top: 5%;
+  margin-bottom: 5%;
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-side h2 {
+  color: rgb(37, 67, 112);
+  margin-bottom: 10px;
+  font-size: 40px; 
+}
+
+.text-side p {
+
+  font-size: 18px;
+  color: #666;
+}
+
+.image-side {
+  background-color: rgb(210,210,210);
+  margin-top: 5%;
+  margin-bottom: 5%;
+  flex-basis: 40%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-side img {
+  max-width: 100%; 
+  max-height: 120%;
+  object-fit: contain;
+  border-radius: 0 10px 10px 0;
+}
+
+h2 {
+  color: rgb(37, 67, 112);
+  margin-bottom: 20px;
+}

@@ -1,0 +1,120 @@
+/* Login.css */
+.App {
+  background-color: rgb(37, 67, 112);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+}
+
+.login-container {
+  text-align: center;
+  margin-top: 5%; 
+  width: 100%;
+  max-width: 300px;
+}
+
+h1 {
+  color: rgb(179,179,179);
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 15px;
+}
+
+.icon {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  margin-right: 10px; 
+}
+
+.input-box {
+  flex: 1; 
+  padding: 10px;
+  border-radius: 20px; 
+  border: none; 
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+  color: white; /* Text color */
+  outline: 2px solid rgba(255, 255, 255, 0.5); 
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7); 
+}
+
+.checkbox-group {
+  display: flex; 
+  align-items: center; 
+  margin-top: 20px; 
+}
+
+.checkbox {
+  margin-right: 10px; 
+}
+
+.checkbox-label {
+  color: rgb(179,179,179);
+  font-size: 18px;
+}
+
+.link-group {
+  margin-top: 20px; 
+  margin-bottom: 50px;
+}
+
+.login-button {
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(179,179,179); 
+  color: rgb(37, 67, 112); 
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.link {
+  color: rgb(179,179,179); 
+  text-decoration: none; 
+}
+
+.link:hover {
+  text-decoration: underline; 
+}
+
+.Login-alt {
+  text-align: center;
+  margin-top: 50px; 
+}
+
+.Login-alt h1 {
+  color: rgb(179,179,179);
+  margin-bottom: 20px;
+}
+
+.social-group {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  margin-bottom: 10px;
+}
+
+.icon-insta {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 24px; 
+  margin-right: 10px; 
+}
+
+.Insta-label {
+  color: rgb(179,179,179);
+  font-size: 18px;
+  flex: 1;
+  text-align: left; 
+}
