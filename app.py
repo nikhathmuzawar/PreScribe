@@ -14,7 +14,8 @@ nlp.add_pipe("textrank")
 def summarize():
     data = request.json
     symptoms_text = data.get('symptoms', '')
-    
+    history="diagnosed with Migraines a few years ago and have been taking medication for it. history of high blood pressure and I had a knee surgery last year."
+    symptoms_text=str(symptoms_text+history)
     doc = nlp(symptoms_text)
     summary_sentences = [sent.text for sent in doc._.textrank.summary(limit_phrases=2, limit_sentences=2)]
     
