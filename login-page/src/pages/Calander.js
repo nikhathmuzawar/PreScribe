@@ -1,5 +1,5 @@
 import React from 'react';
-import './Calander.css';
+import '../styling/Calander.css';
 
 function Calendar() {
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];

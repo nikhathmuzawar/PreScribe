@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './Login';
-import Main from './Main';
-import AiScribe from './AiScribe'; // Import the AiScribe component
+import Login from './pages/Login';
+import Main from './pages/slider';
+import AiScribe from './pages/AiScribe'; // Import the AiScribe component
+
 
 function App() {
   return (

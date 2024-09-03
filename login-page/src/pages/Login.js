@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaUser, FaLock, FaInstagram, FaFacebook, FaGoogle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import '../styling/Login.css';
 
 function Login() {
   const [username, setUsername] = useState('');
