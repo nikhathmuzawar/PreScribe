@@ -1,69 +1,71 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../styling/main.css'; // Ensure this path is correct
-import sampleImage1 from '../assets/sample-image1.png'; 
-import sampleImage2 from '../assets/sample-image2.png'; 
-import sampleImage3 from '../assets/sample-image3.png'; 
-import { FaBars, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import Calendar from './Calander';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import '../styling/main.css';
+import { FaBars } from 'react-icons/fa'; 
+import Calendar from './Calander'; 
+
+import sampleImage1 from '../assets/sample-image1.png';
+import sampleImage2 from '../assets/sample-image2.png';
+import sampleImage3 from '../assets/sample-image3.png';
+import '../styling/slider.css';
 
 function Main() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   const handleSymptomsClick = () => {
-    navigate('/aiscribe');
+    navigate('/aiscribe'); // Navigate to AiScribe page
   };
 
-  const slides = [
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const containers = [
     {
-      id: 1,
-      title: 'REPORT YOUR SYMPTOMS',
-      description: 'We will connect you with a doctor in a short while',
+      title: "REPORT YOUR SYMPTOMS",
+      description: "We will connect you with a doctor in a short while",
       image: sampleImage1,
-      onClick: handleSymptomsClick
+      handleClick: () => navigate('/aiscribe'),
     },
     {
-      id: 2,
-      title: 'DELIVER MEDICINES HOME',
-      description: 'Deliver medicines to your doorstep',
+      title: "DELIVER MEDICINES HOME",
+      description: "Get all your meds delivered right to your doorstep",
       image: sampleImage2,
-      onClick: () => alert("Navigating to diagnosis page...")
+      handleClick: () => alert('Find a Doctor Clicked'), // add the page to redirect to
     },
     {
-      id: 3,
-      title: 'PHARMACY NEAR ME',
-      description: 'Find Pharmacies Near me',
+      title: "PHARMACY'S NEAR ME",
+      description: "Find all the Pharmacy's near you!",
       image: sampleImage3,
-      onClick: () => alert("Navigating to follow-up page...")
-    }
-  ];
+      handleClick: () => alert('Book an Appointment Clicked'),
+    },
+     ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
-    }, 7000); // Auto-slide every 7 seconds
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % containers.length);
+      }, 10000);
+  
+      return () => clearInterval(interval); // Cleanup interval on component unmount
+    }, [containers.length]);
+  
+    const handleNext = () => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % containers.length);
+    };
+  
+    const handlePrev = () => {
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + containers.length) % containers.length);
+    };
+  
 
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
-  const goToPrevious = () => {
-    setCurrentIndex(currentIndex === 0 ? slides.length - 1 : currentIndex - 1);
-  };
-
-  const goToNext = () => {
-    setCurrentIndex(currentIndex === slides.length - 1 ? 0 : currentIndex + 1);
-  };
 
   return (
     <div className="App">
       <div className="menu-icon" onClick={toggleMenu}>
-        <FaBars />
+        <FaBars/>
       </div>
       {menuOpen && (
         <div className="utilities-menu">
@@ -76,32 +78,23 @@ function Main() {
           </ul>
         </div>
       )}
-
-      <div className="slider-container">
-        <FaArrowLeft className="slider-arrow left-arrow" onClick={goToPrevious} />
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`image-text-container ${index === currentIndex ? 'active' : ''}`}
-            onClick={slide.onClick}
-            style={{
-              display: index === currentIndex ? 'flex' : 'none'
-            }}
-          >
-            <div className="text-side">
-              <h2>{slide.title}</h2>
-              <p>{slide.description}</p>
-            </div>
-            <div className="image-side">
-              <img src={slide.image} alt="Sample" />
-            </div>
-          </div>
-        ))}
-        <FaArrowRight className="slider-arrow right-arrow" onClick={goToNext} />
+    <div className="slideshow-container">
+      <div className="image-text-container" onClick={containers[currentIndex].handleClick}>
+        <div className="text-side">
+          <h2>{containers[currentIndex].title}</h2>
+          <p>{containers[currentIndex].description}</p>
+        </div>
+        <div className="image-side">
+          <img src={containers[currentIndex].image} alt={containers[currentIndex].title} />
+        </div>
       </div>
+      <button className="nav prev" onClick={handlePrev}>&#10094;</button>
+      <button className="nav next" onClick={handleNext}>&#10095;</button>
+    </div>
 
+      {/* Container 2: Static Calendar with Utilities Menu */}
       <div className="calendar-container">
-        <h2>Book Your Appointment: AUGUST 2024</h2>
+        <h1> Book Your Appointment: AUGUST 2024 </h1>
         <Calendar />
       </div>
     </div>
