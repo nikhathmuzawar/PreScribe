@@ -38,7 +38,8 @@ function AiScribe() {
       <button className="appointment-button" onClick={handleButtonClick}>
         Find me an appointment
       </button>
-      {summary.length > 0 && (
+      <h1>Summary</h1>
+      {summary.length > 0 && 
         <div className="summary-output">
           <h2>Summary</h2>
           <ul>
@@ -47,7 +48,7 @@ function AiScribe() {
             ))}
           </ul>
         </div>
-      )}
+      }
     </div>
   );
 }

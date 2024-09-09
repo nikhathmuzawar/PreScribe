@@ -1,0 +1,15 @@
+too many people in rural areas, they dont have access to hospitals
+our app is called prescribe 
+ai powered scribe
+eradication physical records
+online consulation but making it more efficient 
+doctor does not need to go through this huge data of histories 
+additional features
+medicine delivery
+first aid
+future things-
+voice assistant
+local langauges 
+no kisosk bs 
+The rural health statistics report for 2020-21 shows the increase in shortage of healthcare workers across rural healthcare sub-centres. This is a small part of the problem as a growing population requires a quicker and more accurate medical management system. Medical records and information form a large and sometimes unstructured database which is difficult to traverse and compile, making it difficult for healthcare providers to efficiently diagnose diseases whilst going through the medical histories of each patient due to lack of manpower and infrastructure. 
+ a “medical scribe” AI model that goes through a large amount of medical history for a large base of patients, summarises all key data and compares it to current symptoms by flagging out any information that would be critical to the current case by demographic, making diagnoses easier and more competent.

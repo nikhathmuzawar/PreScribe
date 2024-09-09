@@ -18,6 +18,9 @@ def summarize():
     symptoms_text=str(symptoms_text+history)
     doc = nlp(symptoms_text)
     summary_sentences = [sent.text for sent in doc._.textrank.summary(limit_phrases=2, limit_sentences=2)]
+    print(summary_sentences)
+    firstaid="Fisrt aid: take a dolo for temporay relif"
+    summary_sentences.append("Fisrt aid: take a dolo for temporay relif")
     
     return jsonify(summary=summary_sentences)
 
