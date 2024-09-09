@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import './main.css';
-import sampleImage from './assets/sample-image.png'; 
+import '../styling/main.css';
+import sampleImage from '../assets/sample-image1.png'; 
 import { FaBars } from 'react-icons/fa'; 
 import Calendar from './Calander'; 
 

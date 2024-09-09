@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AiScribe.css'; // Ensure this file exists with appropriate styling
+import '../styling/AiScribe.css'; // Ensure this file exists with appropriate styling
 
 function AiScribe() {
   const [symptoms, setSymptoms] = useState('');

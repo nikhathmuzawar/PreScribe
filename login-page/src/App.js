@@ -1,8 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './Login';
-import Main from './Main';
-import AiScribe from './AiScribe'; // Import the AiScribe component
+import Login from './pages/Login';
+import Main from './pages/slider';
+import AiScribe from './pages/AiScribe';
+import Profile from './pages/Profile';
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/main" element={<Main />} />
         <Route path="/aiscribe" element={<AiScribe />} />
+        <Route path="/Profile" element={<Profile />} />
       </Routes>
     </Router>
   );

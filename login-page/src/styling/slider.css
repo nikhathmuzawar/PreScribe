@@ -1,0 +1,71 @@
+.slideshow-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  max-width: 600px; /* Adjusted to make the overall container smaller */
+  margin: auto;
+  overflow: hidden;
+}
+
+.image-text-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%; /* Adjust the height to make the container smaller */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-side {
+  flex: 1;
+  padding: 10px; /* Reduced padding to fit smaller container */
+  background-color: rgb(210,210,210);
+}
+
+.image-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(210,210,210);
+  overflow: hidden; /* Ensures the image doesn't overflow its container */
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.image-side img {
+  max-width: 100%;
+  max-height: 100%; /* Ensure the image fits within the container */
+  height: auto; 
+  width: auto;
+  border-radius: 8px;
+}
+
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(210,210,210,0.2);
+  border: none;
+  color: rgb(37, 67, 112);
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+h2 {
+  font-size: 20 px;
+  color: rgb(179,179,179);
+}
+
+h1 {
+  color: rgb(37, 67, 112);
+}
