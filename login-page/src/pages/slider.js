@@ -34,13 +34,13 @@ function Main() {
       title: "DELIVER MEDICINES HOME",
       description: "Get all your meds delivered right to your doorstep",
       image: sampleImage2,
-      handleClick: () => alert('Find a Doctor Clicked'),
+      handleClick: () => alert('Not available yet in the Dev build, to be added soon'),
     },
     {
       title: "PHARMACY'S NEAR ME",
       description: "Find all the Pharmacy's near you!",
       image: sampleImage3,
-      handleClick: () => alert('Book an Appointment Clicked'),
+      handleClick: () => alert('Not available yet in the Dev build, to be added soon'),
     },
   ];
 

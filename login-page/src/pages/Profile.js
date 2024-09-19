@@ -3,7 +3,7 @@ import '../styling/Profile.css';
 
 const Profile = () => {
   const [profile, setProfile] = useState({
-    username: 'Nikkitha Muzawar Fathima ',
+    username: 'Nikkitha Fathima Muzawar',
     age: 69,
     sex: 'Female',
     height: 175,

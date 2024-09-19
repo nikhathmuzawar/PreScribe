@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Main from './pages/slider';
 import AiScribe from './pages/AiScribe';
 import Profile from './pages/Profile';
+import SignUp from './pages/SignUp';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/main" element={<Main />} />
         <Route path="/aiscribe" element={<AiScribe />} />
         <Route path="/Profile" element={<Profile />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
   );

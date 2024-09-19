@@ -27,15 +27,11 @@ function Login() {
   return (
     <div className="App">
       <div className="login-container">
-        <h1>Login</h1>
+        <h2>Login</h2>
         <div className="input-group">
           <FaUser className="icon" />
-          <input
-            type="text"
-            placeholder="Username"
-            className="input-box"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+          <input type="text" placeholder="Username" className="input-box" value={username}
+           onChange={(e) => setUsername(e.target.value)}
           />
         </div>
         <div className="input-group">
@@ -53,8 +49,11 @@ function Login() {
           <input type="checkbox" id="remember-me" className="checkbox" />
           <label htmlFor="remember-me" className="checkbox-label">Remember me</label>
         </div>
-        <div className="link-group">
-          <a href="/signup" className="link">Sign in as Doctor</a>
+        <div className="link-group1">
+          <a href="/signupDoc" className="link">Sign in as Doctor</a>
+        </div>
+        <div className="link-group2">
+          <a href="/signup" className="link">Sign Up Now</a>
         </div>
         <button className="login-button" onClick={handleLogin}>Login</button>
        
