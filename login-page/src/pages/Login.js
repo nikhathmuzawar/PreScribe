@@ -50,7 +50,7 @@ function Login() {
           <label htmlFor="remember-me" className="checkbox-label">Remember me</label>
         </div>
         <div className="link-group1">
-          <a href="/signupDoc" className="link">Sign in as Doctor</a>
+          <a href="/Doc" className="link">Sign in as Doctor</a>
         </div>
         <div className="link-group2">
           <a href="/signup" className="link">Sign Up Now</a>

@@ -5,7 +5,7 @@ import Main from './pages/slider';
 import AiScribe from './pages/AiScribe';
 import Profile from './pages/Profile';
 import SignUp from './pages/SignUp';
-
+import Doc from './pages/Doc';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/aiscribe" element={<AiScribe />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/Doc" element={<Doc />} />
       </Routes>
     </Router>
   );
